@@ -128,6 +128,15 @@
             <button @onclick="DownloadConfig" title="Save config to JSON file">Save</button>
             <button type="button" onclick="document.getElementById('config-uploader').click()" title="Load config from JSON file">Load</button>
             <InputFile id="config-uploader" OnChange="UploadConfig" style="display: none;" accept=".json" />
+            <button @onclick="() => showTree = true">
+                Tree
+            </button>
+            <IntegratorTree
+                IsVisible="@showTree"
+                Integrators="@addedIntegrators"
+                Names="@Names"
+                OnClose="() => showTree = false"
+                OnDataChanged="StateHasChanged" />
         </div>
     </div>
 

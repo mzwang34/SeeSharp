@@ -28,6 +28,7 @@ public partial class IntegratorSelector : ComponentBase
     public string? activeCascadeModule = null;
     public Integrator? activeLocalMenuIntegrator = null;
     public string? activeLocalSub = null;
+    public bool showTree = false;
 
     HashSet<Integrator> expandedItems = new();
     Integrator? draggedItem;
